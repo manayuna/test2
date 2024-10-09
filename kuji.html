@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>席替えアプリ</title>
+ </head>
+ <body>
+   <h1>席替えアプリのロジック学習</h1>
+   <p>更新ボタンで席替えを行う</p>
+   <div id="seki"></div>
+   <script>
+       //↓ここから
+       const a = ["山崎", "児玉", "神山", "鈴木", "田中", "高橋", "園田", "井上", "山岸", "香田",]; //①
+       let column = 3; //②
+       let count = 1;  //③
+       const n = a.length;  //④
+       let seki = document.getElementById("seki") //⑤
+       for (let i = 0; i < n; i++) { //⑥
+           const r = Math.floor(Math.random() * a.length); //⑦
+           const v = a.splice(r, 1); //⑧
+           if (count % column == 0) { //⑨
+               seki.innerHTML += "|" + v + "<br>";
+           } else {
+               seki.innerHTML += "|" + v;
+           }
+           count++; //⑩       
+        }
+       //↑ここまで
+   </script>
+ </body>
+</html>

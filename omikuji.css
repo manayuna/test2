@@ -1,0 +1,16 @@
+p{
+    text-align: center;
+    color: #666;;
+}
+#omikuji{
+    text-align: center;
+    margin: 0;
+    color: white;
+    background-color: #a3eaff;
+    font-size: 30px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+#omikuji:hover{
+    background-color: #dff7ff;
+}
